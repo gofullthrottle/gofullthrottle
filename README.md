@@ -1,5 +1,10 @@
-### Hi there 👋
-
+<details><summary>### Hi there 👋 </summary>
+<p>
+#### yes, even hidden code blocks!
+```python
+print("hello world!")
+```
+</p>
 <!--
 **gofullthrottle/gofullthrottle** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -14,3 +19,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
+
+</details>
