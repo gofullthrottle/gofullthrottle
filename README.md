@@ -1,8 +1,9 @@
 <details>
-  <summary>Hi there 👋 </summary>
-  <p>
-  yes, even hidden code blocks!
-  ```python
+  <summary> Hi there 👋 </summary>
+  <p>  
+  
+  ```
+  python
   print("hello world!")
   ```
   </p>
