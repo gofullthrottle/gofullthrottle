@@ -1,0 +1,65 @@
+{
+  "profile": {
+    "username": "gofullthrottle",
+    "title": "AI Engineer | Blockchain Innovator | Level 5 Autonomous Systems",
+    "theme": {
+      "primary_color": "#00FF88",
+      "secondary_color": "#FF6B6B", 
+      "background": "#0D1117",
+      "text_color": "#FFFFFF"
+    }
+  },
+  "evolution_timeline": {
+    "2019": "PANGEAM",
+    "2020": "PANGEAM", 
+    "2021": "PANGEAM",
+    "2022": "CRYPTO",
+    "2023": "A.I.",
+    "2024": "AGENTIC",
+    "2025": "LEVEL 5"
+  },
+  "dynamic_content": {
+    "ai_status_prompts": [
+      "Neural networks optimized. Blockchain protocols synchronized. Autonomous systems at {efficiency}% efficiency.",
+      "AGI research protocols active. Web3 infrastructure deployment in progress. Level 5 automation modules loading...",
+      "Quantum entanglement established. Smart contract deployment successful. AI consciousness expansion at {percentage}%.",
+      "Deep learning models converging. Consensus mechanisms verified. Agentic systems initializing...",
+      "Transformer architectures scaled. DeFi protocols secured. Multi-agent coordination active.",
+      "Reinforcement learning optimized. Zero-knowledge proofs verified. Level 5 autonomy approaching..."
+    ],
+    "project_keywords": {
+      "ai": ["ai", "neural", "machine-learning", "gpt", "llm", "transformer", "pytorch", "tensorflow"],
+      "blockchain": ["crypto", "web3", "solidity", "ethereum", "defi", "smart-contract", "blockchain"],
+      "automation": ["automation", "bot", "workflow", "ci", "devops", "pipeline"],
+      "agentic": ["agent", "autonomous", "agentic", "multi-agent", "swarm", "collective"]
+    }
+  },
+  "widgets": {
+    "enabled": [
+      "github_stats",
+      "streak_stats", 
+      "activity_graph",
+      "trophy",
+      "snake_animation",
+      "spotify_playing",
+      "neural_network",
+      "data_stream",
+      "visitor_counter",
+      "typing_svg"
+    ],
+    "spotify_user": "31k6hzwnwffm2jkng4ncdx5x4cdy",
+    "wakatime_enabled": true,
+    "custom_animations": true
+  },
+  "social_links": {
+    "linkedin": "https://linkedin.com/in/johnfreier",
+    "twitter": "https://twitter.com/johnf_ucb", 
+  },
+  "automation": {
+    "update_frequency": "*/6 * * * *",
+    "snake_frequency": "0 */12 * * *",  
+    "metrics_frequency": "0 0 * * *",
+    "ai_updates": true,
+    "contribution_art": true
+  }
+}
