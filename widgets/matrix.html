@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+        
+        #matrix {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .matrix-text {
+            position: absolute;
+            color: #00ff41;
+            font-size: 14px;
+            animation: fall linear infinite;
+            text-shadow: 0 0 10px #00ff41;
+        }
+        
+        @keyframes fall {
+            0% { transform: translateY(-100vh); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+        
+        .glow {
+            color: #ffffff;
+            text-shadow: 0 0 20px #00ff41, 0 0 30px #00ff41;
+        }
+    </style>
+</head>
+<body>
+    <div id="matrix"></div>
+    
+    <script>
+        const matrix = document.getElementById('matrix');
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        
+        function createDrop() {
+            const drop = document.createElement('div');
+            drop.className = 'matrix-text';
+            drop.style.left = Math.random() * window.innerWidth + 'px';
+            drop.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            drop.style.animationDelay = Math.random() * 2 + 's';
+            
+            let text = '';
+            for (let i = 0; i < Math.random() * 10 + 5; i++) {
+                text += chars[Math.floor(Math.random() * chars.length)] + '<br>';
+            }
+            drop.innerHTML = text;
+            
+            if (Math.random() < 0.1) {
+                drop.classList.add('glow');
+            }
+            
+            matrix.appendChild(drop);
+            
+            setTimeout(() => {
+                if (drop.parentNode) {
+                    drop.parentNode.removeChild(drop);
+                }
+            }, 5000);
+        }
+        
+        setInterval(createDrop, 100);
+        
+        // Add some special messages
+        const messages = [
+            'FULL THROTTLE',
+            'NEURAL NETWORK ACTIVE',
+            'AGI INITIALIZED',
+            'LEVEL 5 LOADING...',
+            'QUANTUM ENTANGLED',
+            'BLOCKCHAIN SYNCHRONIZED'
+        ];
+        
+        function createSpecialMessage() {
+            const drop = document.createElement('div');
+            drop.className = 'matrix-text glow';
+            drop.style.left = Math.random() * (window.innerWidth - 200) + 'px';
+            drop.style.animationDuration = '8s';
+            drop.style.fontSize = '16px';
+            drop.innerHTML = messages[Math.floor(Math.random() * messages.length)];
+            
+            matrix.appendChild(drop);
+            
+            setTimeout(() => {
+                if (drop.parentNode) {
+                    drop.parentNode.removeChild(drop);
+                }
+            }, 8000);
+        }
+        
+        setInterval(createSpecialMessage, 5000);
+    </script>
+</body>
+</html>
