@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="564" viewBox="0 0 850 564">
+  <defs>
+    <style>
+      @keyframes blink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+      }
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-5px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .cursor {
+        animation: blink 1s infinite;
+      }
+      .terminal-text {
+        font-family: JetBrains Mono, Fira Code, Monaco, Consolas, monospace;
+        font-size: 13px;
+      }
+      .line {
+        animation: fadeIn 0.3s ease-out forwards;
+        opacity: 0;
+      }
+    </style>
+  </defs>
+
+  <!-- Terminal Window -->
+  <rect width="850" height="564" rx="10" fill="#0d1117"/>
+
+  <!-- Terminal Header -->
+  <rect width="850" height="36" rx="10" fill="#161b22"/>
+  <rect y="26" width="850" height="10" fill="#161b22"/>
+
+  <!-- Window Controls -->
+  <circle cx="20" cy="18" r="6" fill="#f85149"/>
+  <circle cx="40" cy="18" r="6" fill="#d29922"/>
+  <circle cx="60" cy="18" r="6" fill="#3fb950"/>
+
+  <!-- Terminal Title -->
+  <text x="425" y="22" fill="#8b949e" font-family="JetBrains Mono, Fira Code, Monaco, Consolas, monospace" font-size="12" text-anchor="middle">
+    gofullthrottle@github — zsh — 850×564
+  </text>
+
+  <!-- Terminal Content -->
+  <g transform="translate(20, 55)">
+    <g class="line" style="animation-delay: 0.0s">
+      <text x="0" y="0" fill="#8b949e" class="terminal-text"># 🖥️  Live Terminal — Last updated: 2025-11-27 01:51 UTC</text>
+    </g>
+    <g class="line" style="animation-delay: 0.08s">
+      <text x="0" y="22" fill="#8b949e" class="terminal-text"># 🔗  github.com/gofullthrottle</text>
+    </g>
+    <g class="line" style="animation-delay: 0.16s">
+      <text x="0" y="44" fill="#c9d1d9" class="terminal-text"></text>
+    </g>
+    <g class="line" style="animation-delay: 0.24s">
+      <text x="0" y="66" fill="#58a6ff" class="terminal-text">$ cat ~/.current_project</text>
+    </g>
+    <g class="line" style="animation-delay: 0.32s">
+      <text x="0" y="88" fill="#bc8cff" class="terminal-text">📦 dvc</text>
+    </g>
+    <g class="line" style="animation-delay: 0.4s">
+      <text x="0" y="110" fill="#c9d1d9" class="terminal-text">   🦉 ML Experiments and Data Management with Git</text>
+    </g>
+    <g class="line" style="animation-delay: 0.48s">
+      <text x="0" y="132" fill="#8b949e" class="terminal-text">   ⭐ 1 | 🔧 None</text>
+    </g>
+    <g class="line" style="animation-delay: 0.56s">
+      <text x="0" y="154" fill="#c9d1d9" class="terminal-text"></text>
+    </g>
+    <g class="line" style="animation-delay: 0.64s">
+      <text x="0" y="176" fill="#58a6ff" class="terminal-text">$ git log --oneline --graph -n 8</text>
+    </g>
+    <g class="line" style="animation-delay: 0.72s">
+      <text x="0" y="198" fill="#bc8cff" class="terminal-text">│ ● git checkout -b claude/enhance-github-profile-01WcYvkVveYT5MoPJcGeMfxJ</text>
+    </g>
+    <g class="line" style="animation-delay: 0.8s">
+      <text x="0" y="220" fill="#bc8cff" class="terminal-text">│ ● gh repo star copilot-cli</text>
+    </g>
+    <g class="line" style="animation-delay: 0.88s">
+      <text x="0" y="242" fill="#3fb950" class="terminal-text">│ ● git push origin collective-vision</text>
+    </g>
+    <g class="line" style="animation-delay: 0.96s">
+      <text x="0" y="264" fill="#bc8cff" class="terminal-text">│ ● git checkout -b master</text>
+    </g>
+    <g class="line" style="animation-delay: 1.04s">
+      <text x="0" y="286" fill="#bc8cff" class="terminal-text">│ ● gh repo star Kimi-K2</text>
+    </g>
+    <g class="line" style="animation-delay: 1.12s">
+      <text x="0" y="308" fill="#bc8cff" class="terminal-text">│ ● gh repo star hosts</text>
+    </g>
+    <g class="line" style="animation-delay: 1.2s">
+      <text x="0" y="330" fill="#bc8cff" class="terminal-text">│ ● gh repo star uptime-kuma</text>
+    </g>
+    <g class="line" style="animation-delay: 1.28s">
+      <text x="0" y="352" fill="#bc8cff" class="terminal-text">└ ○ gh repo star toolkit</text>
+    </g>
+    <g class="line" style="animation-delay: 1.36s">
+      <text x="0" y="374" fill="#c9d1d9" class="terminal-text"></text>
+    </g>
+    <g class="line" style="animation-delay: 1.44s">
+      <text x="0" y="396" fill="#58a6ff" class="terminal-text">$ echo $STATUS</text>
+    </g>
+    <g class="line" style="animation-delay: 1.52s">
+      <text x="0" y="418" fill="#3fb950" class="terminal-text">🟢 Available for collaboration</text>
+    </g>
+    <g class="line" style="animation-delay: 1.6s">
+      <text x="0" y="440" fill="#c9d1d9" class="terminal-text"></text>
+    </g>
+    <g class="line" style="animation-delay: 1.68s">
+      <text x="0" y="462" fill="#58a6ff" class="terminal-text">$ </text>
+      <rect x="23.4" y="450" width="10" height="16" fill="#58a6ff" class="cursor"/>
+    </g>
+  </g>
+</svg>

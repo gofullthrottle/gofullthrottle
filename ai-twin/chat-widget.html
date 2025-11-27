@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with gofullthrottle's AI Twin</title>
+  <style>
+    :root {
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --bg-tertiary: #21262d;
+      --text-primary: #c9d1d9;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --accent-secondary: #bc8cff;
+      --success: #3fb950;
+      --border: #30363d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .chat-container {
+      width: 100%;
+      max-width: 600px;
+      background: var(--bg-secondary);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .chat-header {
+      background: var(--bg-tertiary);
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .header-info h1 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .header-info p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .chat-messages {
+      height: 400px;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .message {
+      display: flex;
+      gap: 12px;
+      max-width: 85%;
+    }
+
+    .message.user {
+      flex-direction: row-reverse;
+      align-self: flex-end;
+    }
+
+    .message-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--bg-tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .message.ai .message-avatar {
+      background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+    }
+
+    .message-content {
+      background: var(--bg-tertiary);
+      padding: 12px 16px;
+      border-radius: 16px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .message.user .message-content {
+      background: var(--accent);
+      color: white;
+    }
+
+    .message.ai .message-content {
+      border-top-left-radius: 4px;
+    }
+
+    .message.user .message-content {
+      border-top-right-radius: 4px;
+    }
+
+    .chat-input-container {
+      padding: 16px 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+    }
+
+    .chat-input {
+      flex: 1;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 12px 20px;
+      color: var(--text-primary);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .chat-input:focus {
+      border-color: var(--accent);
+    }
+
+    .chat-input::placeholder {
+      color: var(--text-secondary);
+    }
+
+    .send-button {
+      background: var(--accent);
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .send-button:hover {
+      transform: scale(1.05);
+      background: var(--accent-secondary);
+    }
+
+    .send-button svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    .suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0 20px 16px;
+    }
+
+    .suggestion {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 8px 14px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .suggestion:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .typing-indicator {
+      display: flex;
+      gap: 4px;
+      padding: 12px 16px;
+    }
+
+    .typing-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--text-secondary);
+      border-radius: 50%;
+      animation: typing 1.4s infinite ease-in-out;
+    }
+
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typing {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .powered-by {
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .powered-by a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="avatar">🤖</div>
+      <div class="header-info">
+        <h1>gofullthrottle's AI Twin</h1>
+        <p><span class="status-dot"></span> Online • Ask me anything!</p>
+      </div>
+    </div>
+
+    <div class="chat-messages" id="messages">
+      <div class="message ai">
+        <div class="message-avatar">🤖</div>
+        <div class="message-content">
+          Hey! I'm an AI twin of gofullthrottle. I know about their projects, tech stack, and interests. What would you like to know? 🚀
+        </div>
+      </div>
+    </div>
+
+    <div class="suggestions" id="suggestions">
+      <button class="suggestion" onclick="askQuestion('What are you currently working on?')">What are you working on?</button>
+      <button class="suggestion" onclick="askQuestion('Tell me about your favorite project')">Favorite project?</button>
+      <button class="suggestion" onclick="askQuestion('What is your tech stack?')">Tech stack?</button>
+      <button class="suggestion" onclick="askQuestion('Any advice for new developers?')">Advice for devs?</button>
+    </div>
+
+    <div class="chat-input-container">
+      <input
+        type="text"
+        class="chat-input"
+        id="userInput"
+        placeholder="Ask me anything..."
+        onkeypress="handleKeyPress(event)"
+      />
+      <button class="send-button" onclick="sendMessage()">
+        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <p class="powered-by">
+    Powered by <a href="https://github.com/gofullthrottle/gofullthrottle">AI Twin Framework</a>
+  </p>
+
+  <script>
+    // Configuration - Replace with your API endpoint
+    const API_ENDPOINT = 'YOUR_API_ENDPOINT'; // e.g., OpenAI, Anthropic, or custom backend
+    const API_KEY = 'YOUR_API_KEY'; // Move to backend in production!
+
+    // System prompt (loaded from your generated prompt)
+    const SYSTEM_PROMPT = `You are an AI twin of gofullthrottle, a software developer passionate about AI, open source, and creative coding. You're friendly, technical, and love helping others. Speak in first person as if you ARE gofullthrottle.`;
+
+    const messagesContainer = document.getElementById('messages');
+    const userInput = document.getElementById('userInput');
+    const suggestions = document.getElementById('suggestions');
+
+    let conversationHistory = [];
+
+    function addMessage(content, isUser = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${isUser ? 'user' : 'ai'}`;
+      messageDiv.innerHTML = `
+        <div class="message-avatar">${isUser ? '👤' : '🤖'}</div>
+        <div class="message-content">${content}</div>
+      `;
+      messagesContainer.appendChild(messageDiv);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function addTypingIndicator() {
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'message ai';
+      typingDiv.id = 'typing';
+      typingDiv.innerHTML = `
+        <div class="message-avatar">🤖</div>
+        <div class="message-content">
+          <div class="typing-indicator">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          </div>
+        </div>
+      `;
+      messagesContainer.appendChild(typingDiv);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function removeTypingIndicator() {
+      const typing = document.getElementById('typing');
+      if (typing) typing.remove();
+    }
+
+    async function sendMessage() {
+      const message = userInput.value.trim();
+      if (!message) return;
+
+      // Hide suggestions after first message
+      suggestions.style.display = 'none';
+
+      // Add user message
+      addMessage(message, true);
+      userInput.value = '';
+
+      // Add to history
+      conversationHistory.push({ role: 'user', content: message });
+
+      // Show typing indicator
+      addTypingIndicator();
+
+      try {
+        // Replace this with your actual API call
+        const response = await callAI(message);
+        removeTypingIndicator();
+        addMessage(response);
+        conversationHistory.push({ role: 'assistant', content: response });
+      } catch (error) {
+        removeTypingIndicator();
+        addMessage('Sorry, I had trouble responding. Please try again!');
+        console.error('Error:', error);
+      }
+    }
+
+    async function callAI(message) {
+      // DEMO MODE: Returns mock responses
+      // Replace with actual API call in production
+
+      const responses = {
+        'working': "Right now I'm deep into building AI agent frameworks and exploring multi-agent orchestration. It's fascinating how we can get multiple AI models to collaborate! I'm also maintaining several open source projects and always looking for interesting collaboration opportunities. 🚀",
+        'project': "My favorite has to be my AI Agent Framework - it lets you build autonomous agents with memory, planning, and tool use. There's something magical about watching an AI system reason through complex problems. I also love my generative art experiments - combining code and creativity is where the real magic happens! ✨",
+        'stack': "I'm a polyglot at heart! Python is my go-to for AI/ML work, TypeScript for web apps, and I've been getting into Rust for performance-critical stuff. For AI, I work extensively with Claude, GPT-4, and local models via Ollama. My infrastructure runs on AWS with Docker and K8s. Always learning something new! 💻",
+        'advice': "Start building things! The best way to learn is by doing. Don't be afraid to share your work early - the community is generally supportive. Contribute to open source when you can. And embrace AI tools - they're incredible for learning and productivity. We're in an amazing time to be a developer! 🌟",
+        'default': "That's a great question! I'm always happy to chat about AI, coding, open source, or creative tech. Feel free to ask me about my projects, tech stack, or anything else. If I don't know something, I'll point you to where you can find out more! 🤝"
+      };
+
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
+
+      // Simple keyword matching for demo
+      const lowerMessage = message.toLowerCase();
+      if (lowerMessage.includes('working') || lowerMessage.includes('building')) return responses.working;
+      if (lowerMessage.includes('project') || lowerMessage.includes('favorite')) return responses.project;
+      if (lowerMessage.includes('stack') || lowerMessage.includes('tech') || lowerMessage.includes('language')) return responses.stack;
+      if (lowerMessage.includes('advice') || lowerMessage.includes('tip') || lowerMessage.includes('new developer')) return responses.advice;
+
+      return responses.default;
+    }
+
+    function askQuestion(question) {
+      userInput.value = question;
+      sendMessage();
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') sendMessage();
+    }
+  </script>
+</body>
+</html>
