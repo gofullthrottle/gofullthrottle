@@ -285,7 +285,7 @@ I trained an AI version of myself on my repos, writing style, and technical know
 
 <br>
 
-[![Chat with AI Twin](https://img.shields.io/badge/💬_Chat_with_my-AI_Twin-bc8cff?style=for-the-badge&logoColor=white)](https://poe.com/gofullthrottle-twin)
+[![Chat with AI Twin](https://img.shields.io/badge/💬_Chat_with_my-AI_Twin-bc8cff?style=for-the-badge&logoColor=white)](https://gofullthrottle.github.io/ai-twin/)
 
 <br>
 
