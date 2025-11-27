@@ -1,0 +1,44 @@
+name: 🧠 Update AI Twin Knowledge
+
+on:
+  schedule:
+    # Runs weekly on Sunday at midnight
+    - cron: "0 0 * * 0"
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/extract_knowledge.py'
+
+jobs:
+  update-knowledge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Extract Knowledge
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT_DIR: ai-twin
+        run: python scripts/extract_knowledge.py
+
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🧠 Update AI twin knowledge base"
+          file_pattern: "ai-twin/*.json ai-twin/*.md"
+          branch: main

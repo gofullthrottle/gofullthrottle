@@ -1,0 +1,133 @@
+{
+  "extracted_at": "2025-11-27T01:51:23.653180",
+  "profile": {
+    "username": "gofullthrottle",
+    "name": "John Freier",
+    "bio": "I like building stuff.   \r\n@Pangeam \r\n@VSTeam (Statricks)\r\n@EdgeLake ",
+    "company": "@Pangeam @VSTeam @EdgeLake",
+    "location": "Silicon Valley, CA",
+    "blog": "https://www.johnefreier.com",
+    "twitter": "johnf_ucb",
+    "public_repos": 627,
+    "followers": 123,
+    "following": 879
+  },
+  "expertise": {
+    "primary_languages": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "Vim script",
+      "C++"
+    ],
+    "all_languages": {
+      "Python": 13,
+      "JavaScript": 5,
+      "TypeScript": 3,
+      "Vim script": 3,
+      "C++": 3,
+      "PowerShell": 1,
+      "HTML": 1,
+      "VimL": 1,
+      "Lua": 1,
+      "Objective-C": 1
+    },
+    "topics": [],
+    "total_repos": 100,
+    "total_stars": 12
+  },
+  "top_projects": [
+    {
+      "name": "White-Knight",
+      "description": "White Knight Belt Printer",
+      "language": null,
+      "stars": 2,
+      "topics": [],
+      "readme_excerpt": "# White-Knight\nWhite Knight Belt Printer\nThis repository contains all files necessary to build you own White Knight Belt printer..\nPlease bear with me as I continue to update files and process assembly videos\n\nI believe all files have been converted to Fusion 360 now.  If you discover a file I've missed please open a new issue and I will get it converted and uploaded.. \n\nThere are people trying to organize group buys for the belt materials..  see link below..\nhttps://infinityprinters.org/t/group-buy-endless-belt/67\n"
+    },
+    {
+      "name": "WebCam-Google-Shodan-Dorks",
+      "description": null,
+      "language": null,
+      "stars": 2,
+      "topics": [],
+      "readme_excerpt": "# Google & Shodan Dorks for WebCam\n\n## Google Dorks:\n---------------------------\n\n- inurl:\"CgiStart?page=\"\n\n- inurl:camctrl.cgi\n\n- inurl:\"view/index.shtml\"\n\n- intitle:\"IP CAMERA Viewer\" intext:\"setting |Client setting\"\n\n- intitle:\"Device(\" AND intext:\"Network Camera\" AND \"language:\" \"AND \"Password\"\n\n- intitle:\"webcam 7\" inurl:\"/gallery.html\"\n\n- intitle:\"yawcam\" inurl:\":8081\"\n\n- intitle:\"iGuard Fingerprint Security System\"\n\n- (intitle:MOBOTIX intitle:PDAS) | (intitle:MOBOTIX intitle:Seiten) | (inurl:/pda/index.html +camera)\n\n- intitle:\"Edr1680 remote viewer\"\n\n- intitle:\"NetCam Live Image\" -.edu -.gov -johnny.ihackstuff.com\n\n- intitle:\"INTELLINET\" intitle:\"IP Camera Homepage\"\n\n- intitle:\"WEBDVR\" -inurl:product -inurl:demo\n\n- intitle:\"Middle frame of Videoconference Management System\" ext:htm\n\n- tilt intitle:\"Live View / - AXIS\" | inurl:view/view.shtml\n\n- intitle:\"AXIS 240 Camera Server\" intext:\"server push\" -help\n\n- intitle:\"--- VIDEO WEB SERVER ---\" intext:\"Video Web Server\" \"Any time &"
+    },
+    {
+      "name": "sn0int",
+      "description": "Semi-automatic OSINT framework and package manager",
+      "language": null,
+      "stars": 2,
+      "topics": [],
+      "readme_excerpt": "# sn0int [![Build Status][travis-img]][travis] [![crates.io][crates-img]][crates] [![Documentation Status][docs-img]][docs] [![irc.hackint.org:6697/#sn0int][irc-img]][irc] [![@sn0int][twitter-img]][twitter] [![@sn0int@chaos.social][mastodon-img]][mastodon] [![registry status][registry-img]][registry]\n\n[travis-img]:   https://travis-ci.org/kpcyrd/sn0int.svg?branch=master\n[travis]:       https://travis-ci.org/kpcyrd/sn0int\n[crates-img]:   https://img.shields.io/crates/v/sn0int.svg\n[crates]:       https://crates.io/crates/sn0int\n[docs-img]:     https://readthedocs.org/projects/sn0int/badge/?version=latest\n[docs]:         https://sn0int.readthedocs.io/en/latest/?badge=latest\n[irc-img]:      https://img.shields.io/badge/hackint-%23sn0int-blue.svg\n[irc]:          https://webirc.hackint.org/#irc://irc.hackint.org/#sn0int\n[twitter-img]:  https://img.shields.io/badge/twitter-@sn0int-blue.svg\n[twitter]:      https://twitter.com/sn0int\n[mastodon-img]: https://img.shields.io/badge/mastodon-chaos.s"
+    },
+    {
+      "name": "dvc",
+      "description": "\ud83e\udd89 ML Experiments and Data Management with Git",
+      "language": null,
+      "stars": 1,
+      "topics": [],
+      "readme_excerpt": "|Banner|\n\n`Website <https://dvc.org>`_\n\u2022 `Docs <https://dvc.org/doc>`_\n\u2022 `Blog <http://blog.dataversioncontrol.com>`_\n\u2022 `Tutorial <https://dvc.org/doc/get-started>`_\n\u2022 `Related Technologies <https://dvc.org/doc/user-guide/related-technologies>`_\n\u2022 `How DVC works`_\n\u2022 `VS Code Extension`_\n\u2022 `Installation`_\n\u2022 `Contributing`_\n\u2022 `Community and Support`_\n\n|CI| |Python Version| |Coverage| |VS Code| |DOI|\n\n|PyPI| |PyPI Downloads| |Packages| |Brew| |Conda| |Choco| |Snap|\n\n|\n\n**Data Version Control** or **DVC** is a command line tool and `VS Code Extension`_ to help you develop reproducible machine learning projects:\n\n#. **Version** your data and models.\n   Store them in your cloud storage but keep their version info in your Git repo.\n\n#. **Iterate** fast with lightweight pipelines.\n   When you make changes, only run the steps impacted by those changes.\n\n#. **Track** experiments in your local Git repo (no servers needed).\n\n#. **Compare** any data, code, parameters, model, or performance plots.\n\n"
+    },
+    {
+      "name": "vfat-tools",
+      "description": null,
+      "language": null,
+      "stars": 1,
+      "topics": [],
+      "readme_excerpt": "## vfat.tools\n\n_It ain't much, but it's honest work_\n\nApp : https://vfat.tools\n\nOriginal work: https://yieldfarming.info\n\n## How to run locally\n\nFork the repo and clone it to your PC, or just clone the original.\nRun `npm install` (once) and `npm run dev`\n\nThis should bring up the interface at localhost:3000 after a minute or two.\n\n## How to submit a new project, or any changes\n\n- Fork the project\n- Clone your forked copy onto your PC\n- Create a new branch, make the required changes, *test it locally* using the above method\n- Commit to your branch and push to your repo\n- Go to your repo's github page and click Submit a pull request\n\nThis article is also a good explainer on the pull request system: https://opensource.com/article/19/7/create-pull-request-github\n\nIf you need help with the above process you can contact me on twitter, or telegram, vfat0 on both.\n\nIf you are unable to submit a new project this way, you can open a new Issue https://github.com/vfat-tools/vfat-tools/issues. Plea"
+    }
+  ],
+  "recent_activity": [
+    {
+      "repo": "dvc",
+      "description": "\ud83e\udd89 ML Experiments and Data Management with Git",
+      "updated": "2025-11-26T15:33:46Z"
+    },
+    {
+      "repo": "collective-vision",
+      "description": "Project: collective-vision",
+      "updated": "2025-11-26T13:07:01Z"
+    },
+    {
+      "repo": "chuk-mcp-linkedin",
+      "description": null,
+      "updated": "2025-11-01T14:23:39Z"
+    },
+    {
+      "repo": "awesome-n8n-templates",
+      "description": "Supercharge your workflow automation with this curated collection of n8n templates! Instantly connect your favorite apps-like Gmail, Telegram, Google Drive, Slack, and more-with ready-to-use, AI-powered automations. Save time, boost productivity, and unlock the true potential of n8n in just a few clicks.",
+      "updated": "2025-10-26T08:27:02Z"
+    },
+    {
+      "repo": "test-directory",
+      "description": null,
+      "updated": "2025-10-21T21:38:08Z"
+    },
+    {
+      "repo": "news_toolkit",
+      "description": "A news template application built in Flutter, by Google and Very Good Ventures. Learn more at: https://flutter.github.io/news_toolkit",
+      "updated": "2025-10-01T18:47:19Z"
+    },
+    {
+      "repo": "spiderfoot",
+      "description": "SpiderFoot, the open source footprinting and intelligence-gathering  tool.",
+      "updated": "2025-09-13T17:54:03Z"
+    },
+    {
+      "repo": "NeMo",
+      "description": "NeMo: a framework for generative AI",
+      "updated": "2025-08-29T14:00:48Z"
+    },
+    {
+      "repo": "openai-agents-python",
+      "description": "A lightweight, powerful framework for multi-agent workflows",
+      "updated": "2025-08-20T07:57:59Z"
+    },
+    {
+      "repo": "tty-share",
+      "description": "Share your linux or osx terminal over the Internet.",
+      "updated": "2025-08-04T13:57:13Z"
+    }
+  ]
+}

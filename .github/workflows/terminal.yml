@@ -1,0 +1,44 @@
+name: 🖥️ Generate Live Terminal
+
+on:
+  schedule:
+    # Runs every 3 hours to keep it fresh
+    - cron: "0 */3 * * *"
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/generate_terminal.py'
+
+jobs:
+  generate-terminal:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate Terminal SVG
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT_DIR: assets
+        run: python scripts/generate_terminal.py
+
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🖥️ Update live terminal"
+          file_pattern: "assets/*.svg"
+          branch: main

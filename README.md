@@ -242,11 +242,74 @@ Status: 🟢 Active
 
 ---
 
-## 🌊 Contribution Snake
+## 🖥️ Live Terminal — What I'm Building Right Now
 
 <div align="center">
 
-![Snake animation](https://raw.githubusercontent.com/gofullthrottle/gofullthrottle/output/github-contribution-grid-snake-dark.svg)
+<!-- 🔄 Auto-updated every 3 hours via GitHub Actions -->
+<a href="https://github.com/gofullthrottle?tab=repositories">
+  <img src="https://raw.githubusercontent.com/gofullthrottle/gofullthrottle/main/assets/terminal.svg" alt="Live Terminal" width="100%"/>
+</a>
+
+<sub>⚡ This terminal updates automatically with my real GitHub activity</sub>
+
+</div>
+
+---
+
+## 🤖 Chat With My AI Twin
+
+<div align="center">
+
+<table>
+<tr>
+<td width="60%" valign="top">
+
+### 💬 Meet My Digital Doppelgänger
+
+I trained an AI version of myself on my repos, writing style, and technical knowledge. It can answer questions about:
+
+- 🔧 My projects and tech stack
+- 💡 My approach to problem-solving
+- 🤝 Collaboration opportunities
+- 📚 Technical topics I specialize in
+- 🎯 What I'm currently working on
+
+**Try asking:**
+> *"What's your favorite project?"*
+> *"How do you approach AI development?"*
+> *"What advice do you have for new developers?"*
+
+</td>
+<td width="40%" valign="center" align="center">
+
+<br>
+
+[![Chat with AI Twin](https://img.shields.io/badge/💬_Chat_with_my-AI_Twin-bc8cff?style=for-the-badge&logoColor=white)](https://poe.com/gofullthrottle-twin)
+
+<br>
+
+```
+┌─────────────────────┐
+│  🤖 AI Twin Online  │
+│  ━━━━━━━━━━━━━━━━━  │
+│                     │
+│   "Hey! I'm an AI   │
+│    version of       │
+│    gofullthrottle.  │
+│    Ask me anything  │
+│    about code, AI,  │
+│    or my projects!" │
+│                     │
+│   [Start Chat →]    │
+└─────────────────────┘
+```
+
+<sub>Powered by my repos & knowledge base</sub>
+
+</td>
+</tr>
+</table>
 
 </div>
 
