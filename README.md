@@ -1,132 +1,97 @@
-<div align="center">
+# John Freier
 
-# 🚀 FULL THROTTLE 🚀
-### AI Engineer | Blockchain Innovator | Level 5 Autonomous Systems
+Technical founder and full-stack architect. Two companies built from scratch — one that scaled, one that didn't survive COVID. Currently running a 45+ service homelab as an AI-native operations proving ground, building multi-agent orchestration tooling, and writing about the things I've learned (mostly the hard way).
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=24&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&multiline=true&width=600&height=100&lines=PANGEAM+%E2%86%92+CRYPTO+%E2%86%92+A.I.+%E2%86%92+AGENTIC;Building+the+Future%2C+One+Algorithm+at+a+Time" alt="Typing SVG" />
+## The Numbers That Matter
 
----
+| Metric | Value |
+|--------|-------|
+| Companies founded | 2 |
+| Funding raised | $2M (Pangeam, at $15M valuation) |
+| Cloud cost reduction | $240k/year (Statricks, cloud to bare-metal migration) |
+| Infrastructure scale | 45+ Docker services, 20+ TB storage, 40+ PostgreSQL databases |
+| Current lab cost | ~$150-200/month |
 
-### 🌟 NEURAL NETWORK STATUS
+## Experience
 
-<table>
-<tr>
-<td>
+<details>
+<summary><strong>Statricks</strong> — Co-founder, Technical Lead</summary>
 
-**⚡ Current Focus**
-- 🧠 AGI Development
-- 🤖 Autonomous Systems
-- 🔗 Web3 Infrastructure
-- 🎯 Level 5 Automation
+Built a classified ads analytics platform from zero to production on bare-metal infrastructure.
 
-</td>
-<td>
+- Designed and operated multi-TB PostgreSQL HA clusters on bare-metal servers
+- Built ensemble ML pipeline for classified ad categorization and pricing
+- Led cloud-to-bare-metal migration that cut infrastructure costs by $240k/year
+- Maintained zero unplanned downtime for 18 consecutive months
+- Full ownership: architecture, deployment, monitoring, on-call
 
-**🎨 Tech Arsenal**
-- 🐍 Python | 🦀 Rust | ⚛️ React
-- 🔥 PyTorch | 🤗 Transformers
-- ⚓ Solidity | 🌐 Web3.js
-- ☁️ AWS | 🐳 Docker | ⚡ CUDA
+</details>
 
-</td>
-</tr>
-</table>
+<details>
+<summary><strong>Pangeam</strong> — Co-founder, Technical Lead</summary>
 
----
+Built computer vision and ML systems for enterprise facility management. Raised $2M at a $15M valuation.
 
-### 📊 SYSTEM METRICS
+- Deployed on-prem CV/ML systems in 2 Fortune 50 headquarters
+- Integrated 50+ LIDAR sensors for real-time occupancy tracking
+- Navigated enterprise procurement cycles and security reviews
+- COVID killed the in-office occupancy market. We returned ~$400k to investors and shut down cleanly
+- The technology worked. The timing didn't.
 
-<div align="center">
+</details>
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=gofullthrottle&show_icons=true&theme=synthwave&hide_border=true&bg_color=0D1117&title_color=00FF88&icon_color=00FF88&text_color=FFFFFF" />
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=gofullthrottle&theme=synthwave&hide_border=true&background=0D1117&stroke=00FF88&ring=00FF88&fire=FF6B6B&currStreakLabel=00FF88" />
+## Current Build
 
-</div>
+Running a homelab as an AI-native ops environment — not as a toy, but as a real proving ground for how AI agents can operate infrastructure.
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=gofullthrottle&theme=synthwave&hide_border=true&bg_color=0D1117&color=00FF88&line=00FF88&point=FFFFFF" />
+- **45+ Docker Swarm services** on consumer hardware (RTX GPUs for local ML inference)
+- **Claude Code as operator** — using MCP protocol to give AI agents direct infrastructure access
+- **ZFS snapshots** as an AI safety mechanism (rollback when agents break things)
+- **Building initiative-engine** — a multi-agent orchestration platform that turns conversations into parallel workstreams
 
----
+<details>
+<summary><strong>Stack</strong></summary>
 
-### 🏆 ACHIEVEMENT UNLOCKED
+**Languages:** Python, TypeScript, SQL, Bash
 
-<div align="center">
+**Frontend:** React, Next.js, Tailwind CSS
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=gofullthrottle&theme=synthwave&no-frame=true&no-bg=true&margin-w=4&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy)
+**Backend:** FastAPI, Hono, Node.js
 
-</div>
+**Data:** PostgreSQL, Redis, Elasticsearch, Milvus (vector DB), Neo4j
 
----
+**Infrastructure:** Docker Swarm, ZFS, Traefik, Nginx, Prometheus, Grafana
 
-### 🐍 CONTRIBUTION SNAKE
+**AI/ML:** Claude Code, MCP protocol, LiteLLM, local inference (Ollama)
 
-<div align="center">
+**Tools:** uv, pnpm, Git, SonarQube, Ansible
 
-![Snake animation](https://raw.githubusercontent.com/gofullthrottle/gofullthrottle/output/github-contribution-grid-snake-dark.svg)
+</details>
 
-</div>
+## Writing
 
----
+Blog coming at [blog.johnefreier.com](https://blog.johnefreier.com) — retrospectives on startup failures, homelab architecture decisions, and building with AI agents.
 
-### 🎵 NEURAL BEATS
+## What I'm Working On
 
-<div align="center">
+- **initiative-engine**: Multi-agent orchestration platform with 10+ specialized AI agents
+- **Homelab AI ops**: Giving Claude Code direct infrastructure access via MCP servers
+- **Writing**: Honest retrospectives on what worked, what didn't, and why
 
-[![Spotify](https://spotify-recently-played-readme.vercel.app/api?user=31k6hzwnwffm2jkng4ncdx5x4cdy&unique=true)](https://open.spotify.com/user/31k6hzwnwffm2jkng4ncdx5x4cdy)
+## Contact
 
-</div>
-
----
-
-### 🌐 QUANTUM ENTANGLEMENT
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/gofullthrottle)
-[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/gofullthrottle)
-[![Discord](https://img.shields.io/badge/-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/gofullthrottle)
-[![Telegram](https://img.shields.io/badge/-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/gofullthrottle)
-
-</div>
+[jefreier@berkeley.edu](mailto:jefreier@berkeley.edu) · [LinkedIn](https://linkedin.com/in/johnfreier) · [X](https://x.com/johnf_ucb)
 
 ---
 
-### 🧬 DNA SEQUENCE
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/terminal.svg" />
+  <img alt="Live terminal" src="assets/terminal.svg" />
+</picture>
 
-<div align="center">
-
-```ascii
-   ╭─────────────────────────────────╮
-   │  Evolution Timeline             │
-   ├─────────────────────────────────┤
-   │  2019-2021: P A N G E A M      │
-   │  2022:      C R Y P T O        │
-   │  2023:      A . I .            │
-   │  2024:      A G E N T I C      │
-   │  2025:      L E V E L   5      │
-   ╰─────────────────────────────────╯
-```
-
-</div>
-
----
-
-### 💾 SYSTEM.LOG
-
-<div align="center">
-
-![Visitor Count](https://profile-counter.glitch.me/gofullthrottle/count.svg)
-
-**Last Neural Network Update:** ![GitHub last commit](https://img.shields.io/github/last-commit/gofullthrottle/gofullthrottle?style=flat-square&color=00FF88)
-
----
-
-*"The future belongs to those who understand that technology is not just a tool, but an extension of human consciousness."*
-
-**PROCESSING... ⚡ FULL THROTTLE ENGAGED ⚡**
-
-</div>
-
-<!-- DYNAMIC CONTENT UPDATED BY GITHUB ACTIONS -->
-<!-- Last updated: <!-- TIMESTAMP --> -->
-<!-- AI Status: <!-- AI_STATUS --> -->
-<!-- Current Project: <!-- CURRENT_PROJECT --> -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gofullthrottle/gofullthrottle/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gofullthrottle/gofullthrottle/output/github-contribution-grid-snake.svg" />
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/gofullthrottle/gofullthrottle/output/github-contribution-grid-snake.svg" />
+</picture>
