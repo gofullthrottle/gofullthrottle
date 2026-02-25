@@ -1,13 +1,9 @@
-name: 📊 Generate Profile Metrics
+name: Metrics
 
 on:
   schedule:
-    # Runs every day at midnight
-    - cron: "0 0 * * *"
-  workflow_dispatch:  # Allows manual triggering
-  push:
-    branches:
-      - main
+    - cron: "0 0 * * *" # Daily at midnight
+  workflow_dispatch:
 
 jobs:
   github-metrics:
@@ -15,46 +11,23 @@ jobs:
     permissions:
       contents: write
     steps:
-      # ==============================================
-      # PROFILE METRICS - Header Stats
-      # ==============================================
-      - name: 📈 Profile Header Metrics
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
-          filename: metrics/header.svg
           token: ${{ secrets.METRICS_TOKEN }}
+          
           # Options
-          user: ${{ github.repository_owner }}
+          user: gofullthrottle
           template: classic
-          base: header, activity, community, repositories
-          config_timezone: UTC
-
-      # ==============================================
-      # CODING HABITS - Languages & Activity
-      # ==============================================
-      - name: 💻 Coding Habits
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/habits.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          base: ""
-          plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_days: 14
-          plugin_habits_charts: yes
-          plugin_habits_trim: yes
-
-      # ==============================================
-      # LANGUAGES - Most Used Languages
-      # ==============================================
-      - name: 🗣️ Languages
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/languages.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          base: ""
+          base: header, activity, community, repositories, metadata
+          config_timezone: America/New_York
+          
+          # Plugin: Lines of code
+          plugin_lines: yes
+          plugin_lines_history_limit: 1
+          plugin_lines_repositories_limit: 4
+          plugin_lines_sections: base
+          
+          # Plugin: Languages
           plugin_languages: yes
           plugin_languages_analysis_timeout: 15
           plugin_languages_categories: markup, programming
@@ -65,61 +38,39 @@ jobs:
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-
-      # ==============================================
-      # ACHIEVEMENTS - Trophies & Milestones
-      # ==============================================
-      - name: 🏆 Achievements
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/achievements.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          base: ""
+          
+          # Plugin: Notable contributions
+          plugin_notable: yes
+          plugin_notable_from: organization
+          plugin_notable_types: commit
+          
+          # Plugin: Achievements
           plugin_achievements: yes
-          plugin_achievements_threshold: B
+          plugin_achievements_threshold: C
           plugin_achievements_secrets: yes
-          plugin_achievements_display: compact
+          plugin_achievements_display: detailed
           plugin_achievements_limit: 0
-
-      # ==============================================
-      # STARRED REPOS - Notable Stars
-      # ==============================================
-      - name: ⭐ Notable Stars
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/stars.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          base: ""
-          plugin_stars: yes
-          plugin_stars_limit: 4
-
-      # ==============================================
-      # ISOCALENDAR - 3D Contribution Calendar
-      # ==============================================
-      - name: 📅 Isometric Calendar
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/isocalendar.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          base: ""
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-
-      # ==============================================
-      # ACTIVITY - Recent Activity
-      # ==============================================
-      - name: 📰 Recent Activity
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/activity.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: ${{ github.repository_owner }}
-          base: ""
+          
+          # Plugin: Habits
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: classic
+          
+          # Plugin: Activity
           plugin_activity: yes
           plugin_activity_limit: 5
+          plugin_activity_load: 300
           plugin_activity_days: 14
+          plugin_activity_visibility: all
+          plugin_activity_timestamps: yes
           plugin_activity_filter: all
-          plugin_activity_visibility: public
+          
+          # Plugin: Wakatime
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 7
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
+          plugin_wakatime_limit: 5
