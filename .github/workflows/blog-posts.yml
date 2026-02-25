@@ -1,0 +1,48 @@
+name: 📝 Update Blog Posts
+
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # Allows manual triggering
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme-with-blog:
+    name: Fetch and Update Blog Posts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull in blog posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          # Replace with your actual RSS feed URL
+          feed_list: "https://yourblog.com/rss.xml,https://dev.to/feed/yourusername,https://medium.com/feed/@yourusername"
+          max_post_count: 5
+          readme_path: "./README.md"
+          # Custom template for table format
+          template: "| $date | [$title]($url) | `$categories` |"
+          date_format: "yyyy-MM-dd"
+          # Markers in README
+          comment_tag_name: "BLOG-POST-LIST"
+          # Commit settings
+          commit_message: "📝 Updated blog posts"
+          committer_username: "github-actions[bot]"
+          committer_email: "github-actions[bot]@users.noreply.github.com"
+
+      - name: Update timestamp
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          sed -i "s/<!-- LAST_UPDATED:START -->.*<!-- LAST_UPDATED:END -->/<!-- LAST_UPDATED:START -->${DATE}<!-- LAST_UPDATED:END -->/" README.md
+
+      - name: Commit timestamp update
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🕐 Updated timestamp"
+          file_pattern: README.md
