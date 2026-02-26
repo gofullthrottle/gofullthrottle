@@ -47,7 +47,7 @@
   <!-- Terminal Content -->
   <g transform="translate(20, 55)">
     <g class="line" style="animation-delay: 0.0s">
-      <text x="0" y="0" fill="#8b949e" class="terminal-text"># 🖥️  Live Terminal — Last updated: 2026-02-25 21:14 UTC</text>
+      <text x="0" y="0" fill="#8b949e" class="terminal-text"># 🖥️  Live Terminal — Last updated: 2026-02-26 00:35 UTC</text>
     </g>
     <g class="line" style="animation-delay: 0.08s">
       <text x="0" y="22" fill="#8b949e" class="terminal-text"># 🔗  github.com/gofullthrottle</text>
@@ -74,28 +74,28 @@
       <text x="0" y="176" fill="#58a6ff" class="terminal-text">$ git log --oneline --graph -n 8</text>
     </g>
     <g class="line" style="animation-delay: 0.72s">
-      <text x="0" y="198" fill="#bc8cff" class="terminal-text">│ ● gh repo star skill-codex</text>
+      <text x="0" y="198" fill="#3fb950" class="terminal-text">│ ● git push origin gofullthrottle</text>
     </g>
     <g class="line" style="animation-delay: 0.8s">
-      <text x="0" y="220" fill="#bc8cff" class="terminal-text">│ ● gh repo star ccstatusline</text>
+      <text x="0" y="220" fill="#d29922" class="terminal-text">│ ● gh pr merged: &quot;&quot;</text>
     </g>
     <g class="line" style="animation-delay: 0.88s">
-      <text x="0" y="242" fill="#bc8cff" class="terminal-text">│ ● gh repo star sshtalk</text>
+      <text x="0" y="242" fill="#bc8cff" class="terminal-text">│ ● gh repo star skill-codex</text>
     </g>
     <g class="line" style="animation-delay: 0.96s">
-      <text x="0" y="264" fill="#bc8cff" class="terminal-text">│ ● gh repo star ssh-chat</text>
+      <text x="0" y="264" fill="#bc8cff" class="terminal-text">│ ● gh repo star ccstatusline</text>
     </g>
     <g class="line" style="animation-delay: 1.04s">
-      <text x="0" y="286" fill="#bc8cff" class="terminal-text">│ ● gh repo star ssh-ai-chat</text>
+      <text x="0" y="286" fill="#bc8cff" class="terminal-text">│ ● gh repo star sshtalk</text>
     </g>
     <g class="line" style="animation-delay: 1.12s">
-      <text x="0" y="308" fill="#bc8cff" class="terminal-text">│ ● gh repo star ink</text>
+      <text x="0" y="308" fill="#bc8cff" class="terminal-text">│ ● gh repo star ssh-chat</text>
     </g>
     <g class="line" style="animation-delay: 1.2s">
-      <text x="0" y="330" fill="#bc8cff" class="terminal-text">│ ● gh repo star beads</text>
+      <text x="0" y="330" fill="#bc8cff" class="terminal-text">│ ● gh repo star ssh-ai-chat</text>
     </g>
     <g class="line" style="animation-delay: 1.28s">
-      <text x="0" y="352" fill="#3fb950" class="terminal-text">└ ○ git push origin gofullthrottle</text>
+      <text x="0" y="352" fill="#bc8cff" class="terminal-text">└ ○ gh repo star ink</text>
     </g>
     <g class="line" style="animation-delay: 1.36s">
       <text x="0" y="374" fill="#c9d1d9" class="terminal-text"></text>
