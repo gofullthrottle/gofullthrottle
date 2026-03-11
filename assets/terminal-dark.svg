@@ -47,7 +47,7 @@
   <!-- Terminal Content -->
   <g transform="translate(20, 55)">
     <g class="line" style="animation-delay: 0.0s">
-      <text x="0" y="0" fill="#8b949e" class="terminal-text"># 🖥️  Live Terminal — Last updated: 2026-03-11 12:19 UTC</text>
+      <text x="0" y="0" fill="#8b949e" class="terminal-text"># 🖥️  Live Terminal — Last updated: 2026-03-11 15:20 UTC</text>
     </g>
     <g class="line" style="animation-delay: 0.08s">
       <text x="0" y="22" fill="#8b949e" class="terminal-text"># 🔗  github.com/gofullthrottle</text>
@@ -74,10 +74,10 @@
       <text x="0" y="176" fill="#58a6ff" class="terminal-text">$ git log --oneline --graph -n 8</text>
     </g>
     <g class="line" style="animation-delay: 0.72s">
-      <text x="0" y="198" fill="#8b949e" class="terminal-text">│ ● # Activity in flash-local</text>
+      <text x="0" y="198" fill="#3fb950" class="terminal-text">│ ● git push origin flash-local</text>
     </g>
     <g class="line" style="animation-delay: 0.8s">
-      <text x="0" y="220" fill="#3fb950" class="terminal-text">│ ● git push origin flash-local</text>
+      <text x="0" y="220" fill="#8b949e" class="terminal-text">│ ● # Activity in flash-local</text>
     </g>
     <g class="line" style="animation-delay: 0.88s">
       <text x="0" y="242" fill="#d29922" class="terminal-text">│ ● gh pr merged: &quot;&quot;</text>
