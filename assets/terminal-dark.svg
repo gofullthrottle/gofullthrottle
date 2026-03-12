@@ -47,7 +47,7 @@
   <!-- Terminal Content -->
   <g transform="translate(20, 55)">
     <g class="line" style="animation-delay: 0.0s">
-      <text x="0" y="0" fill="#8b949e" class="terminal-text"># 🖥️  Live Terminal — Last updated: 2026-03-12 06:24 UTC</text>
+      <text x="0" y="0" fill="#8b949e" class="terminal-text"># 🖥️  Live Terminal — Last updated: 2026-03-12 09:20 UTC</text>
     </g>
     <g class="line" style="animation-delay: 0.08s">
       <text x="0" y="22" fill="#8b949e" class="terminal-text"># 🔗  github.com/gofullthrottle</text>
@@ -59,13 +59,13 @@
       <text x="0" y="66" fill="#58a6ff" class="terminal-text">$ cat ~/.current_project</text>
     </g>
     <g class="line" style="animation-delay: 0.32s">
-      <text x="0" y="88" fill="#bc8cff" class="terminal-text">📦 flash-local</text>
+      <text x="0" y="88" fill="#bc8cff" class="terminal-text">📦 gofullthrottle</text>
     </g>
     <g class="line" style="animation-delay: 0.4s">
-      <text x="0" y="110" fill="#c9d1d9" class="terminal-text">   Project: flash-local</text>
+      <text x="0" y="110" fill="#c9d1d9" class="terminal-text">   Public profile</text>
     </g>
     <g class="line" style="animation-delay: 0.48s">
-      <text x="0" y="132" fill="#8b949e" class="terminal-text">   ⭐ 4 | 🔧 TypeScript</text>
+      <text x="0" y="132" fill="#8b949e" class="terminal-text">   ⭐ 1 | 🔧 Python</text>
     </g>
     <g class="line" style="animation-delay: 0.56s">
       <text x="0" y="154" fill="#c9d1d9" class="terminal-text"></text>
